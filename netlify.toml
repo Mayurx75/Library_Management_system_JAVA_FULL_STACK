@@ -1,5 +1,10 @@
-# Netlify Functions (Express) serve /api on production. BACKEND_URL overrides to external Spring API.
+# Netlify only auto-loads netlify.toml from the REPOSITORY ROOT.
+# A copy under library-frontend/ is ignored for Git-based sites unless the UI
+# "Base directory" is set to that folder (and then root rules still win).
+# This file pins the monorepo app so builds always run in library-frontend/.
+
 [build]
+  base = "library-frontend"
   command = "npm install --prefix netlify/functions --no-audit --no-fund && npm run build"
   publish = "dist"
 
@@ -11,7 +16,6 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Avoid stale SPA shells: old index.html kept pointing at old hashed JS that still contained the site footer.
 [[headers]]
   for = "/index.html"
   [headers.values]

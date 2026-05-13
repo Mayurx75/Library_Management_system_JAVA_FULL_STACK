@@ -4,7 +4,11 @@ A full-stack library management application with a **Spring Boot** REST API and 
 
 ## Live demo
 
-**Production (Netlify):** [https://lumina-library-ui-20260513.netlify.app](https://lumina-library-ui-20260513.netlify.app)
+**Production (Netlify):** [https://lumina-library-nf-73521.netlify.app](https://lumina-library-nf-73521.netlify.app)
+
+Netlify must use the **repository-root** `netlify.toml` (it sets `base = "library-frontend"`). A `netlify.toml` only under `library-frontend/` is ignored for Git-connected sites unless the UI base directory matches and you rely solely on UI settings, which previously left production on an old static bundle.
+
+To rebuild from GitHub on this (or any) Netlify site: **Site configuration → Build & deploy → Continuous deployment → Link repository** (branch `main`). The first CLI-only deploy does not auto-update until the repo is linked.
 
 The hosted UI uses the same-origin `/api` layer on Netlify (serverless Express function) so the app works without running Spring Boot in the browser. For local development with MySQL, run the Spring API as described below.
 

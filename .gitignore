@@ -34,7 +34,8 @@ library-frontend/*.local
 library-frontend/.env
 library-frontend/.env.*.local
 
-# --- Netlify ---
+# --- Netlify (CLI `link` / `deploy` metadata; never commit) ---
+.netlify/
 library-frontend/.netlify/
 
 # --- Misc ---
