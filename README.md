@@ -2,6 +2,12 @@
 
 A full-stack library management application with a **Spring Boot** REST API and a **React (Vite)** web client. Manage books, students, book issuance and returns, and view dashboard statistics.
 
+## Live demo
+
+**Production (Netlify):** [https://lumina-library-ui-20260513.netlify.app](https://lumina-library-ui-20260513.netlify.app)
+
+The hosted UI uses the same-origin `/api` layer on Netlify (serverless Express function) so the app works without running Spring Boot in the browser. For local development with MySQL, run the Spring API as described below.
+
 ## Repository layout
 
 | Directory | Stack | Description |
