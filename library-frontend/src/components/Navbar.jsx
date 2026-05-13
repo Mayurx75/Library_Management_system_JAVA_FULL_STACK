@@ -49,7 +49,7 @@ export default function Navbar() {
             href="https://kodnest.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="group shrink-0 rounded-xl bg-black/25 p-1.5 ring-1 ring-white/20 transition duration-300 hover:bg-black/35 hover:ring-white/40 hover:shadow-md hover:shadow-black/20"
+            className="group shrink-0 transition duration-200 hover:opacity-90"
             aria-label="KodNest - Leading Tech Training Institute"
           >
             <img
@@ -57,7 +57,7 @@ export default function Navbar() {
               alt="KodNest - Leading Tech Training Institute"
               height={40}
               width={160}
-              className="h-10 w-auto max-w-[140px] object-contain transition duration-300 group-hover:scale-[1.04] sm:max-w-[180px]"
+              className="h-10 w-auto max-w-[140px] object-contain transition duration-200 group-hover:scale-[1.03] sm:max-w-[180px]"
               loading="eager"
             />
           </a>
