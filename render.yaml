@@ -1,0 +1,14 @@
+# Optional: deploy the Spring API to Render (free tier; may spin down when idle).
+# 1. Push repo to GitHub and connect in Render → New Blueprint from render.yaml (or New Web Service with this Dockerfile).
+# 2. Copy the service URL (e.g. https://lumina-library-api.onrender.com).
+# 3. In Netlify: Site → Environment variables → BACKEND_URL = that URL (no trailing slash) → Redeploy site.
+services:
+  - type: web
+    name: lumina-library-api
+    runtime: docker
+    dockerfilePath: ./library-management/Dockerfile
+    dockerContext: ./library-management
+    plan: free
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: cloud
