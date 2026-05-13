@@ -1,0 +1,12 @@
+# Netlify Functions (Express) serve /api on production. BACKEND_URL overrides to external Spring API.
+[build]
+  command = "npm install --prefix netlify/functions --no-audit --no-fund && npm run build"
+  publish = "dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["express"]
+
+[build.environment]
+  NODE_VERSION = "20"

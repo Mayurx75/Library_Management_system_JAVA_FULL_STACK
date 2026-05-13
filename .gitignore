@@ -1,0 +1,44 @@
+# --- OS & editors ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# --- Java / Maven (Spring Boot) ---
+library-management/target/
+library-management/*.jar
+library-management/*.war
+library-management/*.ear
+library-management/.mvn/wrapper/maven-wrapper.jar
+library-management/dependency-reduced-pom.xml
+*.log
+*.class
+hs_err_pid*.log
+
+# --- Node / React (Vite) ---
+library-frontend/node_modules/
+library-frontend/dist/
+library-frontend/.vite/
+library-frontend/coverage/
+library-frontend/.eslintcache
+library-frontend/*.local
+library-frontend/.env
+library-frontend/.env.*.local
+
+# --- Netlify ---
+library-frontend/.netlify/
+
+# --- Misc ---
+*.tmp
+*.bak
+*.orig
+.cursor/
