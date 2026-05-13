@@ -14,6 +14,7 @@ import {
 import StatsCard from '../components/StatsCard.jsx'
 import Button from '../components/Button.jsx'
 import { dashboardService, getApiErrorMessage } from '../services/api.js'
+import { KODNEST_LOGO_URL } from '../constants/branding.js'
 
 function BarChart({ values, labels }) {
   const max = Math.max(1, ...values)
@@ -83,7 +84,23 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="space-y-8 animate-fadeIn">
+    <div className="relative space-y-8 animate-fadeIn pb-4">
+      <a
+        href="https://kodnest.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-20 right-4 z-30 flex max-w-[200px] items-center gap-2 rounded-full border border-primary-200/80 bg-white/90 py-1.5 pl-2 pr-3 text-[11px] font-semibold text-primary-800 shadow-lg shadow-primary-900/10 backdrop-blur-md transition hover:border-primary-300 hover:bg-white hover:shadow-xl dark:border-primary-800 dark:bg-gray-900/90 dark:text-primary-100 dark:hover:bg-gray-900 sm:bottom-24 sm:right-6 lg:bottom-8 lg:right-8"
+        aria-label="Powered by KodNest - Leading Tech Training Institute"
+      >
+        <img
+          src={KODNEST_LOGO_URL}
+          alt=""
+          className="h-7 w-auto object-contain opacity-90"
+          aria-hidden
+        />
+        <span className="leading-tight">Powered by KodNest</span>
+      </a>
+
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-700 via-primary-600 to-sky-500 p-8 text-white shadow-xl">
         <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/15 blur-3xl" />
         <div className="relative flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
