@@ -4,7 +4,7 @@ A full-stack library management application with a **Spring Boot** REST API and 
 
 ## Live demo
 
-**Production (Netlify):** [https://lumina-library-nf-73521.netlify.app](https://lumina-library-nf-73521.netlify.app)
+**Production (Netlify):** [https://lumina-library-ui-20260514-10085.netlify.app](https://lumina-library-ui-20260514-10085.netlify.app)
 
 Netlify must use the **repository-root** `netlify.toml` (it sets `base = "library-frontend"`). A `netlify.toml` only under `library-frontend/` is ignored for Git-connected sites unless the UI base directory matches and you rely solely on UI settings, which previously left production on an old static bundle.
 
